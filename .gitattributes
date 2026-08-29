@@ -1,0 +1,5 @@
+# Normalize to LF in the index on every platform: the pages are hand-edited HTML kept
+# byte-identical across three languages, and a CRLF checkout turns every line into a diff.
+* text=auto eol=lf
+*.md diff=markdown
+*.html diff=html

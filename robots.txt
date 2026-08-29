@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alatyr-programming-language.github.io/sitemap.xml

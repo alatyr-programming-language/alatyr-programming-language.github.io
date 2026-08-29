@@ -1,0 +1,14 @@
+# The site has no build step: index.html, styles.css and logo.svg are served as they are
+# committed. Nothing here is generated, so this file only guards against local noise.
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*~
+*.swp
+.idea/
+.vscode/
+
+# Local agent state. Tracked skills live in the repository; only per-machine state is ignored.
+.claude/worktrees/
+.claude/settings.local.json

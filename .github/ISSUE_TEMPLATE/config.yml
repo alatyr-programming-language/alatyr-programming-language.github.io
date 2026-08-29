@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: How this repository works
+    url: https://github.com/alatyr-programming-language/alatyr-programming-language.github.io/blob/main/CONTRIBUTING.md
+    about: Why every claim on the page has to trace to a line in the spec or the compiler, and why there are no benchmark numbers.
+  - name: The language itself
+    url: https://github.com/alatyr-programming-language/spec/issues
+    about: A question about what Alatyr does, or a defect in the specification, belongs in the spec tracker.
+  - name: The compiler
+    url: https://github.com/alatyr-programming-language/compiler/issues
+    about: A build failure, a wrong value, or anything about the reference toolchain belongs in the compiler tracker.

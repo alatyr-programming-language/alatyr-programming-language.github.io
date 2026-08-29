@@ -1,0 +1,30 @@
+name: An inaccurate claim on the site
+description: The page says something the specification or the compiler does not support.
+labels: ["accuracy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The site's one rule is that every claim traces to a line in `spec/` or `compiler/`.
+        A claim that does not is a defect, not a matter of taste — thank you for reporting it.
+  - type: input
+    id: page
+    attributes:
+      label: Which page
+      placeholder: "/, /ru/ or /zh/"
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: What the page says
+      description: Quote it.
+    validations:
+      required: true
+  - type: textarea
+    id: reality
+    attributes:
+      label: What is actually true, and where it says so
+      description: A file and line in `spec/` or `compiler/`, if you have one.
+    validations:
+      required: true

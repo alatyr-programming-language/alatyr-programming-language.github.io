@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Alatyr — a systems programming language whose ceiling of expressiveness equals the assembler's, with abstractions that stay transparent in code generation.">
+  <title>Alatyr — a systems programming language</title>
+  <link rel="canonical" href="https://alatyr-programming-language.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Alatyr">
+  <meta property="og:url" content="https://alatyr-programming-language.github.io/">
+  <meta property="og:title" content="Alatyr — a systems programming language">
+  <meta property="og:description" content="Alatyr — a systems programming language whose ceiling of expressiveness equals the assembler's, with abstractions that stay transparent in code generation.">
+  <meta property="og:image" content="https://alatyr-programming-language.github.io/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Alatyr">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0d1110">
+
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="alternate" hreflang="en" href="https://alatyr-programming-language.github.io/">
+  <link rel="alternate" hreflang="ru" href="https://alatyr-programming-language.github.io/ru/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://alatyr-programming-language.github.io/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://alatyr-programming-language.github.io/">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="index-page">
+  <div class="landing-shell">
+    <header class="site-topbar">
+      <nav class="language-switcher" aria-label="Language">
+        <span class="active" aria-current="true">EN</span>
+        <a href="ru/index.html" hreflang="ru" lang="ru">RU</a>
+        <a href="zh/index.html" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="landing-hero" id="overview">
+        <div class="landing-hero-main">
+          <div class="landing-hero-copy">
+            <h1>Alatyr</h1>
+            <p>A systems programming language whose ceiling of expressiveness equals the assembler&rsquo;s &mdash; with abstractions that stay transparent in code generation. You always know what the machine does.</p>
+          </div>
+          <div class="site-hero-actions landing-hero-cta">
+            <a class="hero-primary" href="https://github.com/alatyr-programming-language/compiler#quick-start" target="_blank" rel="noreferrer">Get started</a>
+            <a class="hero-secondary" href="https://raw.githubusercontent.com/alatyr-programming-language/compiler/main/seed/alatyr" target="_blank" rel="noreferrer">Download</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="landing-principles" id="principles" aria-labelledby="principles-title">
+        <div class="landing-section-head">
+          <h2 id="principles-title">Predictable to the floor.</h2>
+        </div>
+        <div class="landing-bento">
+          <article class="landing-card landing-card-main">
+            <div><div class="landing-card-label">core premise</div><h3>One language.<br>Every layer.</h3></div>
+            <code>no tier ladder</code>
+          </article>
+          <article class="landing-card landing-card-transparent">
+            <div class="landing-card-label">codegen</div>
+            <h3>Transparent<br>lowering.</h3>
+            <p>Every construct emits code by a documented rule, so you predict the assembler from the source without running the compiler.</p>
+          </article>
+          <article class="landing-card landing-card-zero">
+            <div class="landing-card-label">cost</div>
+            <h3>Nothing<br>hidden.</h3>
+            <p>No hidden allocation, no hidden control flow, no vtables &mdash; behaviour follows from the source, its manifest, and the language conventions.</p>
+          </article>
+          <article class="landing-card landing-card-checked">
+            <div class="landing-card-label">verification</div>
+            <h3>Correct,<br>or a trap.</h3>
+            <p>Operations are checked by default; inside an <code>unchecked</code> scope they are hardware-defined, never whatever suits the compiler.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="landing-syntax" id="syntax" aria-labelledby="syntax-title">
+        <div class="landing-section-head">
+          <h2 id="syntax-title">One form,<br>all the way down.</h2>
+        </div>
+        <div class="landing-syntax-grid">
+          <div class="landing-syntax-copy">
+            <p>There is one declaration form &mdash; <code>name : type = value</code>. Types, functions and generics are values written the same way, so there is nothing new to learn per layer.</p>
+            <div class="landing-syntax-points">
+              <div><code>name := value</code><span>declare and infer the type from the value</span></div>
+              <div><code>fn(&hellip;) -&gt; T</code><span>a value-expression, exactly as <code>struct {&hellip;}</code> is</span></div>
+              <div><code>pub &middot; mut &middot; comptime</code><span>three modifiers on three orthogonal axes</span></div>
+            </div>
+          </div>
+          <div class="landing-code-panel">
+            <div class="landing-code-panel-top"><span>declarations.al</span><span>from the spec</span></div>
+            <pre><span class="terminal-comment">## a declaration binds a name to whatever
+## its right-hand side evaluates to</span>
+
+<span class="terminal-name">Point</span>   := <span class="terminal-keyword">struct</span> { x : <span class="terminal-type">u64</span>, y : <span class="terminal-type">u64</span> }
+<span class="terminal-name">Meters</span>  := brand(<span class="terminal-type">u64</span>)
+<span class="terminal-name">add</span>     := <span class="terminal-keyword">fn</span>(a : <span class="terminal-type">u64</span>, b : <span class="terminal-type">u64</span>) -&gt; <span class="terminal-type">u64</span> { a + b }
+<span class="terminal-name">Vec</span>     := <span class="terminal-keyword">fn</span>(T : <span class="terminal-keyword">type</span>) -&gt; <span class="terminal-keyword">type</span> { <span class="terminal-keyword">struct</span> { ptr : ptr(T), len : <span class="terminal-type">usize</span> } }
+<span class="terminal-keyword">comptime</span> <span class="terminal-name">PI</span> : <span class="terminal-type">f64</span> = <span class="terminal-number">3.14159</span>
+<span class="terminal-keyword">mut</span> <span class="terminal-name">count</span> : <span class="terminal-type">u64</span> = <span class="terminal-number">0</span></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="site-brand" href="https://github.com/alatyr-programming-language" target="_blank" rel="noreferrer"><img class="org-logo" src="logo.svg" alt="" width="32" height="32"><span class="site-brand-label">Alatyr</span></a>
+      <nav class="site-footer-links" aria-label="Project links">
+        <a href="https://raw.githubusercontent.com/alatyr-programming-language/compiler/main/seed/alatyr">Download</a>
+        <a href="https://github.com/alatyr-programming-language/spec" target="_blank" rel="noreferrer">Spec</a>
+        <a href="https://github.com/alatyr-programming-language/compiler" target="_blank" rel="noreferrer">Compiler</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

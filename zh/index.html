@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Alatyr — 一门系统编程语言，其表达能力的上限等同于汇编器，同时提供在代码生成中保持透明的抽象。">
+  <title>Alatyr — 系统编程语言</title>
+  <link rel="canonical" href="https://alatyr-programming-language.github.io/zh/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Alatyr">
+  <meta property="og:url" content="https://alatyr-programming-language.github.io/zh/">
+  <meta property="og:title" content="Alatyr — 系统编程语言">
+  <meta property="og:description" content="Alatyr — 一门系统编程语言，其表达能力的上限等同于汇编器，同时提供在代码生成中保持透明的抽象。">
+  <meta property="og:image" content="https://alatyr-programming-language.github.io/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Alatyr">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0d1110">
+
+  <link rel="icon" href="../logo.svg" type="image/svg+xml">
+  <link rel="alternate" hreflang="en" href="https://alatyr-programming-language.github.io/">
+  <link rel="alternate" hreflang="ru" href="https://alatyr-programming-language.github.io/ru/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://alatyr-programming-language.github.io/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://alatyr-programming-language.github.io/">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="index-page">
+  <div class="landing-shell">
+    <header class="site-topbar">
+      <nav class="language-switcher" aria-label="语言">
+        <a href="../index.html" hreflang="en" lang="en">EN</a>
+        <a href="../ru/index.html" hreflang="ru" lang="ru">RU</a>
+        <span class="active" aria-current="true">中文</span>
+      </nav>
+    </header>
+
+    <main>
+      <section class="landing-hero" id="overview">
+        <div class="landing-hero-main">
+          <div class="landing-hero-copy">
+            <h1>Alatyr</h1>
+            <p>一门系统编程语言，其表达能力的上限等同于汇编器 &mdash;&mdash; 同时提供在代码生成中保持透明的抽象。你始终知道机器在做什么。</p>
+          </div>
+          <div class="site-hero-actions landing-hero-cta">
+            <a class="hero-primary" href="https://github.com/alatyr-programming-language/compiler#quick-start" target="_blank" rel="noreferrer">开始使用</a>
+            <a class="hero-secondary" href="https://raw.githubusercontent.com/alatyr-programming-language/compiler/main/seed/alatyr" target="_blank" rel="noreferrer">下载</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="landing-principles" id="principles" aria-labelledby="principles-title">
+        <div class="landing-section-head">
+          <h2 id="principles-title">可预测，直至底层。</h2>
+        </div>
+        <div class="landing-bento">
+          <article class="landing-card landing-card-main">
+            <div><div class="landing-card-label">核心前提</div><h3>一门语言。<br>每一层。</h3></div>
+            <code>没有层级阶梯</code>
+          </article>
+          <article class="landing-card landing-card-transparent">
+            <div class="landing-card-label">代码生成</div>
+            <h3>透明的<br>降级。</h3>
+            <p>每个结构都按文档化的规则生成代码，因此无需运行编译器即可从源码预测汇编。</p>
+          </article>
+          <article class="landing-card landing-card-zero">
+            <div class="landing-card-label">代价</div>
+            <h3>没有<br>隐藏。</h3>
+            <p>没有隐藏的内存分配，没有隐藏的控制流，没有虚表 &mdash;&mdash; 行为完全来自源码、它的清单和语言约定。</p>
+          </article>
+          <article class="landing-card landing-card-checked">
+            <div class="landing-card-label">验证</div>
+            <h3>正确，<br>或者陷阱。</h3>
+            <p>运算默认经过检查；在 <code>unchecked</code> 作用域内，其行为由硬件定义，而绝非编译器认为方便的方式。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="landing-syntax" id="syntax" aria-labelledby="syntax-title">
+        <div class="landing-section-head">
+          <h2 id="syntax-title">一种形式，<br>贯穿始终。</h2>
+        </div>
+        <div class="landing-syntax-grid">
+          <div class="landing-syntax-copy">
+            <p>声明形式只有一种 &mdash;&mdash; <code>name : type = value</code>。类型、函数和泛型都是以同样方式书写的值，因此每一层都无需学习新的语法。</p>
+            <div class="landing-syntax-points">
+              <div><code>name := value</code><span>声明并从值推断类型</span></div>
+              <div><code>fn(&hellip;) -&gt; T</code><span>一个值表达式，正如 <code>struct {&hellip;}</code> 一样</span></div>
+              <div><code>pub &middot; mut &middot; comptime</code><span>三个修饰符，作用于三条正交的轴</span></div>
+            </div>
+          </div>
+          <div class="landing-code-panel">
+            <div class="landing-code-panel-top"><span>declarations.al</span><span>摘自规范</span></div>
+            <pre><span class="terminal-comment">## 声明把名字绑定到
+## 其右侧表达式求值的结果</span>
+
+<span class="terminal-name">Point</span>   := <span class="terminal-keyword">struct</span> { x : <span class="terminal-type">u64</span>, y : <span class="terminal-type">u64</span> }
+<span class="terminal-name">Meters</span>  := brand(<span class="terminal-type">u64</span>)
+<span class="terminal-name">add</span>     := <span class="terminal-keyword">fn</span>(a : <span class="terminal-type">u64</span>, b : <span class="terminal-type">u64</span>) -&gt; <span class="terminal-type">u64</span> { a + b }
+<span class="terminal-name">Vec</span>     := <span class="terminal-keyword">fn</span>(T : <span class="terminal-keyword">type</span>) -&gt; <span class="terminal-keyword">type</span> { <span class="terminal-keyword">struct</span> { ptr : ptr(T), len : <span class="terminal-type">usize</span> } }
+<span class="terminal-keyword">comptime</span> <span class="terminal-name">PI</span> : <span class="terminal-type">f64</span> = <span class="terminal-number">3.14159</span>
+<span class="terminal-keyword">mut</span> <span class="terminal-name">count</span> : <span class="terminal-type">u64</span> = <span class="terminal-number">0</span></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="site-brand" href="https://github.com/alatyr-programming-language" target="_blank" rel="noreferrer"><img class="org-logo" src="../logo.svg" alt="" width="32" height="32"><span class="site-brand-label">Alatyr</span></a>
+      <nav class="site-footer-links" aria-label="项目链接">
+        <a href="https://raw.githubusercontent.com/alatyr-programming-language/compiler/main/seed/alatyr">下载</a>
+        <a href="https://github.com/alatyr-programming-language/spec" target="_blank" rel="noreferrer">规范</a>
+        <a href="https://github.com/alatyr-programming-language/compiler" target="_blank" rel="noreferrer">编译器</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>
