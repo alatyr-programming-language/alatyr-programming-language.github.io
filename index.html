@@ -101,7 +101,7 @@
 <span class="terminal-name">Point</span>   := <span class="terminal-keyword">struct</span> { x : <span class="terminal-type">u64</span>, y : <span class="terminal-type">u64</span> }
 <span class="terminal-name">Meters</span>  := brand(<span class="terminal-type">u64</span>)
 <span class="terminal-name">add</span>     := <span class="terminal-keyword">fn</span>(a : <span class="terminal-type">u64</span>, b : <span class="terminal-type">u64</span>) -&gt; <span class="terminal-type">u64</span> { a + b }
-<span class="terminal-name">Vec</span>     := <span class="terminal-keyword">fn</span>(T : <span class="terminal-keyword">type</span>) -&gt; <span class="terminal-keyword">type</span> { <span class="terminal-keyword">struct</span> { ptr : ptr(T), len : <span class="terminal-type">usize</span> } }
+<span class="terminal-name">Run</span>     := <span class="terminal-keyword">fn</span>(T : <span class="terminal-keyword">type</span>) -&gt; <span class="terminal-keyword">type</span> { <span class="terminal-keyword">struct</span> { ptr : ptr(T), len : <span class="terminal-type">usize</span> } }
 <span class="terminal-keyword">comptime</span> <span class="terminal-name">PI</span> : <span class="terminal-type">f64</span> = <span class="terminal-number">3.14159</span>
 <span class="terminal-keyword">mut</span> <span class="terminal-name">count</span> : <span class="terminal-type">u64</span> = <span class="terminal-number">0</span></pre>
           </div>
