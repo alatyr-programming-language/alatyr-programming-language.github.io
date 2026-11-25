@@ -19,5 +19,8 @@ First public version of the site; nothing is tagged yet.
 - `Download` links straight at `seed/alatyr` on `raw.githubusercontent.com`. The
   `blob` URL it replaced served GitHub's file viewer, which cannot display a 3.9 MB ELF.
   Once releases are tagged, this should point at a tag rather than at `main`.
+- The declaration example follows `spec/40-declarations.md` §1.3 again: the
+  type-returning function there is named `Run`, not `Vec` (renamed in the spec at
+  `9f7bce3`), and the page shows the sample verbatim.
 - The mark is the organisation's identicon redrawn as a transparent SVG; it is also the
   favicon, so the page makes no external requests at all.
